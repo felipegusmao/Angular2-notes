@@ -34,7 +34,15 @@
 - directives - other components
 - providers - services used
 - @Component decorator
--  Input and Output a great way for child components to communicate with parent components
--
+- Input and Output a great way for child components to communicate with parent components
 
-Finished at video 30
+#### Parent to Child Communication
+- ViewChild to grad child component and call its methods.
+- Used in a filter scenario to call clear and clear the results
+
+
+
+
+#### End of Course objective
+- Do basic component comunication and app
+- 4-30
