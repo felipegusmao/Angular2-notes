@@ -75,6 +75,48 @@
 - ex: *ngIf="currentVehicle"
 - ex: *ngFor="#story of stories"> {{story.name}}
 
+#### Pipes
+- filters = pipes
+- {{character.name | lowercase }}
+- {{event.data | currency}}
+- many other built in pipes
+- Async Pipe - continuous stream of data.
+- you can create your own pipes
+
+
+#### Services
+- Shared Logic
+- ultimate form of code reuse
+- Class replaced (Factories,Services,Providers,Constants,Values)
+- ng2 we just have a class
+
+```
+vehicle.service.ts
+
+@Injectable()
+export class VehicleService {
+  getVehicle() {
+    return [
+      new Vehicle(10, 'Ford focus'),
+      new Vehicle(13, 'Ford fusion'),
+      new Vehicle(15, 'Ford edge')
+      ];
+  }
+}
+```
+- It provides someting of value
+- Shared data or logic
+- Data, logger, exception handler, or message service
+- setup providers
+
+#### Dependency Injection
+- Injector decorator - DI
+- Just add metadata constructor(private _http: Http) {}
+- register service at root component, just do it once or you will have 2 instances
+-
+
+
+
 ####
 
 #### End of Course objective
