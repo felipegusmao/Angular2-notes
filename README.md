@@ -40,8 +40,42 @@
 - ViewChild to grad child component and call its methods.
 - Used in a filter scenario to call clear and clear the results
 
+#### Interpolation
+- One way in
+- {{vehicle.name}}
 
+#### Property Binding
+- One way in
+- take property and [] send values to components
+- ex: character name
+- interpolation is a short way to property Binding
+- [target]="expression"
+- always one way unidirectional
 
+#### Event Binding
+- How we comunicate from the template to the Component
+- (event)="clickHandler"
+- ex: (click)="save()">Save</button>
+- ex: (changed)="vehicleChanged()"
+```
+(click)="select('asdf')"
+```
+
+#### Two way Binding
+- [()] banana in a box syntax
+- [(ngModel)]="expression"
+- [(ngModel)]="character.name
+
+#### Built-in Directives
+- Transform the DOM
+- Camel case
+- [ngStyle]="setStyle()"
+- [ngClass]
+- *ngFor, *ngIf, *ngSwith
+- ex: *ngIf="currentVehicle"
+- ex: *ngFor="#story of stories"> {{story.name}}
+
+####
 
 #### End of Course objective
 - Do basic component comunication and app
