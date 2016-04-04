@@ -175,6 +175,10 @@ above the component
 export class VehiclesComponent {}
 ```
 
+#### Other resources
+- pluralsight , angular 2 get getting start
+- pluralsight, angular 2 fundamentals
+
 #### Child Routers
 - 'vehicles/...'   these ... tells ng2 what you will define it own route
 - makes components extractables
