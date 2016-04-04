@@ -113,11 +113,48 @@ export class VehicleService {
 - Injector decorator - DI
 - Just add metadata constructor(private _http: Http) {}
 - register service at root component, just do it once or you will have 2 instances
--
 
 
+#### Components lifecycle hooks
+- Interface - implement the lifecycle hook's interface
+- ex: export class CharacterComponent implements OnInit
+- ngOnInit() { }
+- keep complex logic out of the constructor
+- ng2 offer a # of interfaces. ngOnChanges, ngOnDestroy, ngAfterViewInit
+- you dont have to use it but it does help
 
-####
+
+#### Http
+- first add script reference to index.html
+- get and save data we can use Promises or Observables
+- separate module
+- Observable is a great new way to work it ng2
+- Look into Rxjs library for other way to interact with data
+
+#### RxJs
+- RxJs (Reactive Js) implements the asynchronous observable pattern and is widely used in Angular 2
+- import 'rxjs/Rx';
+- Once data comes in everyone subscribe get updated.
+
+#### Async Pipe
+```
+vehicles: Observable<Vehicle[]>;
+
+getHeroes() {
+    this.vehicles = this._vehicleService.getVehicles();
+}
+
+
+<li *ngFor="#vehicle of vehicles | async"
+```
+- it does subscribe to the Obervable
+
+
+#### Promises
+- .toPromise()
+- use async too
+
+
 
 #### End of Course objective
 - Do basic component comunication and app
