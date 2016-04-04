@@ -144,7 +144,6 @@ getHeroes() {
     this.vehicles = this._vehicleService.getVehicles();
 }
 
-
 <li *ngFor="#vehicle of vehicles | async"
 ```
 - it does subscribe to the Obervable
@@ -153,6 +152,35 @@ getHeroes() {
 #### Promises
 - .toPromise()
 - use async too
+
+
+#### Routing
+- @RouteConfig({...})
+- <router-outlet>
+- [router-link]
+- RouteParams
+- Router
+- insert router.dev.js to index.html
+- ROUTER_PROVIDERS
+- use PascalCase
+
+above the component
+
+```
+@RouterConfig([
+{ path: '/', name: 'Vehicles', component: VehicleListComponent, useAsDefault: true),
+{ path: '/list/:id', name: 'Vehicles', component: VehicleListComponent ),
+{ path: '/:id', name: 'Vehicle', component: VehicleComponent )
+])
+export class VehiclesComponent {}
+```
+
+#### Child Routers
+- 'vehicles/...'   these ... tells ng2 what you will define it own route
+- makes components extractables
+- define routes in the components
+- router-outlet renders router
+
 
 
 
